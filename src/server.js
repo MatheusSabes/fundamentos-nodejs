@@ -1,9 +1,10 @@
 import http from "node:http";
 
-const users = [];
-
 //JSON - JavaScript Object Notation
 // Cabeçalhos [Requisição/Resposta] => Metadados
+//  HTTP - Status Code
+
+const users = [];
 
 const server = http.createServer((req, res) => {
   const { method, url } = req;
@@ -20,10 +21,10 @@ const server = http.createServer((req, res) => {
       name: "John Doe",
       email: "johndoe@example.com",
     });
-    return res.end("Criação de usuários");
+    return res.writeHead(201).end();
   }
 
-  return res.end("hello world matheus");
+  return res.writeHead(404).end();
 });
 
 server.listen(3333);

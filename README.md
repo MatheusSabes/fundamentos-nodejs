@@ -10,3 +10,6 @@ install brew install httpie
     - npm run dev
     - GET: http GET localhost:3333/users
     - POST: http POST localhost:3333/users
+
+-- LINK
+    [HTTP STATUS CODE] - https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
